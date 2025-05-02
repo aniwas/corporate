@@ -1,0 +1,43 @@
+<div class="story-container">
+    <h2>
+        User Stories
+    </h2>
+    <div class="stories">
+        <div class="story" onclick="openModal([&apos;/sites/default/files/inline-images/1.jpeg&apos;, &apos;/sites/default/files/inline-images/flex.jpg&apos;, &apos;/sites/default/files/inline-images/cng1.jpg&apos;, &apos;/sites/default/files/inline-images/1.jpeg&apos;, &apos;/sites/default/files/inline-images/video.mp4&apos;], &apos;Story 1 Caption&apos;)">
+            <img src="/sites/default/files/inline-images/1.jpeg" alt="Story 1">
+            <h5>
+                Aniwas Mourya
+            </h5>
+        </div>
+        <div class="story" onclick="openModal([&apos;/sites/default/files/inline-images/1.jpeg&apos;, &apos;/sites/default/files/inline-images/flex.jpg&apos;, &apos;/sites/default/files/inline-images/cng1.jpg&apos;, &apos;/sites/default/files/inline-images/1.jpeg&apos;], &apos;Story 1 Caption&apos;)">
+            <img src="/sites/default/files/inline-images/flex.jpg" alt="Story 2">
+            <h5>
+                Aniwas Mourya
+            </h5>
+        </div>
+        <div class="story" onclick="openModal([&apos;/sites/default/files/inline-images/1.jpeg&apos;, &apos;/sites/default/files/inline-images/flex.jpg&apos;, &apos;/sites/default/files/inline-images/cng1.jpg&apos;, &apos;/sites/default/files/inline-images/1.jpeg&apos;], &apos;Story 1 Caption&apos;)">
+            <img src="/sites/default/files/inline-images/cng1.jpg" alt="Story 3">
+            <h5>
+                Aniwas Mourya
+            </h5>
+        </div>
+    </div>
+</div>
+<div class="modal" id="storyModal">
+    <p>
+        <span class="close" onclick="closeModal()">×</span>
+    </p>
+    <div class="progress-bar-container" id="progressBarContainer">
+        &nbsp;
+    </div>
+    <p>
+        <img class="modal-content" id="modalImg">
+    </p>
+    <div id="modalCaption">
+        &nbsp;
+    </div>
+    <p>
+        <button class="prev" onclick="changeSlide(-1)">❮</button> <button class="next" onclick="changeSlide(1)">❯</button> <button class="share" onclick="shareStory()">Share</button>
+    </p>
+</div>
+<script src="./js/script.js"></script>
