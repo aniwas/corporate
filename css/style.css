@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping */
     justify-content: center; /* Center-align stories */
-    gap: 10px; /* Add spacing between stories */
+
     padding: 10px;
 }
 
@@ -34,8 +34,15 @@ body {
     object-fit: cover;
 }
 
+.story img {
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .story-user-name {
-    font-size: 14px;
+    font-size: 13px;
     color: #333;
     margin-top: 5px;
     font-weight: bold;
@@ -125,6 +132,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
+@media only screen and (max-width: 1024px) {
+    .know-more {
+        margin: 0px 40px 0px 435px;
+    }
+}
+
 .know-more:hover {
     background-color: #0056b3;
 }
@@ -136,6 +149,12 @@ body {
     margin: 7px 0px;
     flex-wrap: wrap;
     transition: transform 0.3s ease;
+}
+
+@media only screen and (max-width: 1024px) {
+    .share-icon {
+        margin: -10px 0px;
+    }
 }
 
 .share-icon:hover {
@@ -228,7 +247,7 @@ video.modal-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+
     }
 
     .story {
@@ -238,13 +257,14 @@ video.modal-content {
 
     .story img {
         width: 100%;
-        height: 100%;
+        height: 90%;
+        border-radius: 50%;
         object-fit: cover;
     }
 
-    .story h5 {
-        font-size: 12px;
-        text-align: center;
+    .story-user-name {
+        font-size: 8px;
+        margin-top: 3px;
     }
 
     .modal-content {
@@ -264,19 +284,20 @@ video.modal-content {
     }
 
     .prev, .next {
-        font-size: 20px;
-        padding: -10px 0px;
+        font-size: 30px;
+        margin: -250px -10px;
     }
 
     .know-more {
         font-size: 14px;
-        padding: 8px 16px;
-        margin: 0px 25px 0px 280px;
+        padding: 10px 16px;
+        margin: 0px 20px 0px 300px;
     }
 
     .share-icon {
-        width: 25px; /* Smaller icon size */
-        height: 25px;
+        width: 30px; /* Smaller icon size */
+        height: 35px;
+        margin: -12px 0px;
     }
 }
 
@@ -312,9 +333,9 @@ video.modal-content {
     }
 
     .prev, .next {
-        font-size: 34px;
-        padding: 17px;
-        margin: -230px -14px;
+        font-size: 20px;
+        padding: 5px;
+        margin: -180px -15px;
     }
 
     .know-more {
@@ -327,5 +348,152 @@ video.modal-content {
         width: 20px; /* Smaller icon size */
         height: 20px;
         margin: -5px 0px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    /* Adjust story container for very small screens */
+    .story-container {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+
+        justify-content: flex-start; /* Align stories to the left */
+        padding: 5px;
+    }
+
+    .story {
+        flex: 0 0 auto; /* Prevent shrinking and ensure fixed width */
+        width: 50px; /* Smaller size for very small screens */
+        height: 60px;
+        text-align: center;
+    }
+
+    .story img {
+        width: 100%; /* Ensure the image fills the container */
+        height: 50px; /* Adjust height for small screens */
+        border-radius: 50%; /* Keep circular shape */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+
+    .story-user-name {
+        font-size: 8px; /* Smaller font size for user name */
+        text-align: center; /* Center-align the text */
+        margin-top: 3px; /* Reduce spacing */
+    }
+
+    .modal-content {
+        width: 95%; /* Adjust modal width */
+        max-height: 50vh; /* Adjust modal height */
+    }
+
+    .progress-bar-container {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        height: 2px; /* Reduce height of progress bar */
+    }
+
+    .progress-bar {
+        margin: 0 0.5px; /* Reduce spacing between progress bars */
+    }
+
+    .prev, .next {
+        font-size: 16px; /* Smaller navigation buttons */
+        padding: 5px;
+    }
+
+    .know-more {
+        font-size: 10px; /* Smaller button font size */
+        padding: 4px 8px;
+    }
+
+    .share-icon {
+        width: 15px; /* Smaller icon size */
+        height: 15px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    /* Adjust story container for 375px screens */
+    .story-container {
+        padding: 5px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: flex-start; /* Align stories to the left */
+    }
+
+    .story {
+        flex: 0 0 auto; /* Prevent shrinking */
+        width: 55px; /* Slightly larger size than 320px */
+        height: 65px;
+    }
+
+    .story img {
+        height: 55px;
+        border-radius: 50%;
+        object-fit: cover; /* Maintain aspect ratio */
+        width: 100%; /* Ensure the image fills the container */
+    }
+
+    .story-user-name {
+        font-size: 7px; /* Slightly larger font size */
+    }
+
+    .modal-content {
+        width: 95%; /* Adjust modal width */
+        max-height: 55vh; /* Adjust modal height */
+    }
+
+    .progress-bar-container {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        height: 3px; /* Adjust height of progress bar */
+    }
+
+    .progress-bar {
+        margin: 0 0.5px; /* Adjust spacing between progress bars */
+    }
+
+    .prev, .next {
+        font-size: 20px; /* Adjust navigation button size */
+        padding: 5px;
+        margin: -90px -15px;
+    }
+
+    .know-more {
+        font-size: 11px; /* Adjust button font size */
+        padding: 10px 10px;
+        margin: 0px 15px 0px 120px;
+    }
+
+    .share-icon {
+        width: 25px; /* Adjust icon size */
+        height: 30px;
+        margin: -10px 0px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .prev, .next {
+        margin: -285px -15px;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .prev, .next {
+        margin: -300px -15px;
+    }
+}
+@media only screen and (max-height: 440px) {
+    .prev, .next {
+        font-size: 25px;
+        margin: -30px -10px;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    .prev, .next {
+        margin: -90px -15px;
     }
 }
