@@ -7,6 +7,8 @@ function openModal(storyMedia, caption) {
     currentSlide = 0;
     document.getElementById('storyModal').style.display = 'block';
     document.getElementById('modalCaption').innerText = caption;
+    document.getElementById('modalImg').src = storyMedia[0]; // Set the first image/video
+    document.getElementById('modalImg').alt = 'Story Media';
     createProgressBars(stories.length);
     showSlide(currentSlide);
     updateProgressBar(currentSlide);
