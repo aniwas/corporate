@@ -62,7 +62,7 @@ function showSlide(index) {
         knowMoreButton.className = 'know-more';
         modal.appendChild(knowMoreButton);
     }
-    knowMoreButton.innerText = 'Know More';
+    knowMoreButton.innerText = 'Know More >';
     knowMoreButton.onclick = () => {
         alert(`Know more about story ${index + 1}`); // Replace with your desired action
     };
